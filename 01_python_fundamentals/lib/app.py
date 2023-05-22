@@ -42,7 +42,9 @@ pet_name = "Rose"
 # TERNARY:
 # true, if conditon else default value
 # print("Rose needs to be fed") if pet_mood == "Hungry!" else print("Rose is all good")
-
+# age = 1
+# is_baby = "baby".capitalize() if age < 2 else "not a baby"
+# print(is_baby)
 
 # print("Hello world!", end=" ")
 # print("Hello sun!", end="!! ")
@@ -101,13 +103,16 @@ pet_name = "Rose"
 
 
 # def pet_birthday(age):
-#     try f"Happy Birthday! Your pet is {age+1} years old!":
-#         return f"Happy Birthday! Your pet is {age+1} years old!"
+#     try:
+#         message = f"Happy Birthday! Your pet is {age} years old!"
+#         return message
 #     except TypeError:
-#         return "Type Error Occured"
+#         return "A Type error occured"
 #     finally:
-#         return "It's all good!"
+#         print("It's all good!")
 
+
+# print(pet_birthday(2))
 
 # pet_birthday(5)
 # pet_birthday(10) => "Happy Birthday! Your pet is now 11."
@@ -116,4 +121,62 @@ pet_name = "Rose"
 # Note => To view more common Python exceptions, visit https://docs.python.org/3/library/exceptions.html
 
 # 🚨 To create an ipdb breakpoint, comment / uncomment line below:
-# ipdb.set_trace()
+# ipdb.set_trac
+
+# AKIN TO SWITCH STATEMENT
+# dog = "hungry"
+
+# dict_map = {
+#     "hungry": "Refilling food bowl.",
+#     "thirsty": "Refilling water bowl.",
+#     "playful": "Playing tug-of-war.",
+#     "cuddly": "Snuggling.",
+# }
+
+# owner = dict_map.get(dog, "Reading newspaper")
+
+# print(owner)
+
+# WHILE LOOP
+# i = 1
+# while i <= 5:
+#     print(i)
+#     i += 1
+
+# FOR LOOP
+# b = "demitry"
+# for i in b:
+#     print(i)
+
+# LIST COMPREHENSIONS
+# player_heights = [
+#     0.008,
+#     0.008,
+#     0.008,
+#     0.009,
+#     0.008,
+#     0.01,
+#     0.009,
+#     0.009,
+#     0.01,
+#     0.008,
+#     0.009,
+#     0.009,
+#     0.008,
+#     0.008,
+#     0.008,
+#     0.009,
+#     0.008,
+#     0.009,
+#     0.01,
+#     0.01,
+# ]
+
+# player_heights = [height * 7920 for height in player_heights]
+
+# print(player_heights)
+
+# numbers = {1, 2, 3, 4, 5}
+
+# numbers = {squared * squared for squared in numbers}
+# print(numbers)
