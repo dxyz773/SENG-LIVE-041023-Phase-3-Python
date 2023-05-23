@@ -59,8 +59,9 @@ pet_names = [
 # print(pet_names)
 
 # 14. ✅ Remove element by specific index
-# del pet_names[1]
+# del pet_names[1] or pet_names.remove(pet_names[0]) or pet_names.pop(0)
 # print(pet_names)
+
 # 15. ✅ Remove a specific element
 # pet_names.remove("Spot")
 # print(pet_names)
@@ -201,7 +202,7 @@ pet_info = [
 
 # def count(list):
 #     i = 0
-#     while i < len(list):
+#     while i < len(list) -1:
 #         i += 1
 #     return i
 
@@ -219,14 +220,14 @@ pet_info = [
 # Otherwise, return 'pet not found'
 
 
-# def check(dictionary, name, age):
-#     i = 0
-#     while i < len(dictionary):
-#         if dictionary[i]["name"] == name:
-#             dictionary[i]["age"] = age
-#         else:
-#             return "pet not found"
-#         i += 1
+def check(dictionary, name, age):
+    i = 0
+    while i < len(dictionary):
+        if dictionary[i]["name"] == name:
+            dictionary[i]["age"] = age
+        else:
+            return "pet not found"
+        i += 1
 
 
 # check_return = check(pet_info, "bob", 100)
@@ -234,20 +235,22 @@ pet_info = [
 # map like
 
 # 39. ✅ Use list comprehension to return a list containing every pet name from "pet_info" changed to uppercase
-# test = [key["name"].upper() for key in pet_info]
-# print(test)
+
+test = [key["name"].upper() for key in pet_info]
+print(test)
 
 
 # 40. ✅ Use list comprehension to find a pet named spot
-# test = [key for key in pet_info if key["name"] == "spot"]
-# print(test)
+
+test_1 = [key for key in pet_info if key["name"] == "spot"]
+print(test_1)
 
 # filter like
 # 41. ✅ Use list comprehension to find all of the pets under 3 years old
-# test = [pet["name"] for pet in pet_info if pet["age"] < 3]
-# print(test)
+test_2 = [pet["name"] for pet in pet_info if pet["age"] < 3]
+print(test_2)
 
 # 43. ✅ Create a generator expression matching the filter above. Compare and contrast the generator to the list comprehension.
-# test = (pet["name"] for pet in pet_info if pet["age"] < 3)
-# for i in test:
-#     print(i)
+test_3 = (pet["name"] for pet in pet_info if pet["age"] < 3)
+for i in test_3:
+    print(i)
